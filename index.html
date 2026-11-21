@@ -56,6 +56,10 @@
     </div>
   </div>
 </section>
+<section class="section wrap" id="checkout" aria-labelledby="checkout-title">
+  <h2 id="checkout-title">Finalize sua compra</h2>
+  <div id="elements"></div>
+</section>
 </main>
 <footer><div class="wrap footer"><span>© 2026 Samuel de Azevedo Cursos Musicais Ltda.</span><button id="privacy" type="button">Preferências de cookies</button></div></footer>
 <div class="mobile-buy"><a class="btn" data-checkout="mobile" href="https://chk.eduzz.com/8017XZ8K07">Comprar por R$ 47 <b>↗</b></a></div>
@@ -66,4 +70,21 @@
 </a>
 <aside id="measurement" class="measurement" hidden aria-label="Cookies"><p>Usamos cookies de medição.</p><div><button type="button" data-consent="denied">Recusar</button><button type="button" class="btn" data-consent="granted">Aceitar cookies</button></div></aside>
 <dialog id="preferences"><form method="dialog"><h2>Preferências de cookies</h2><p>Usamos o Meta Pixel para medir visitas e resultados dos anúncios.</p><div><button value="denied">Recusar</button><button class="btn" value="granted">Aceitar cookies</button></div></form></dialog>
+<script src="https://cdn.eduzzcdn.com/sun/bridge/bridge.js" async type="module"></script>
+<script>
+  (function () {
+    const load = function () {
+      window.Eduzz?.Checkout?.init({
+        contentId: "8017XZ8K07",
+        target: "elements",
+        errorCover: false
+      });
+    };
+    if (document.readyState === "complete") {
+      load();
+      return;
+    }
+    window.addEventListener("load", load, { once: true });
+  })();
+</script>
 </body></html>
